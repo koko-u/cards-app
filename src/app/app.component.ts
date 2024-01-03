@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core'
+import { Component, signal, ChangeDetectionStrategy } from '@angular/core'
 import { CardModel } from './models/card.model'
 import { CardComponent } from './components/card.component'
 
@@ -8,6 +8,7 @@ import { CardComponent } from './components/card.component'
   selector: 'app-root',
   templateUrl: './app.component.html',
   styles: ``,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   cards = signal<CardModel[]>([
